@@ -150,7 +150,7 @@ const Login = () => {
                       isLoading={isLoading}
                       ButtonTextStyle="!text-primary"
                       variant="secondary"
-                      className=" mt-[18px] rounded border border-[#00A353] !bg-[#FFFFFF] !text-white"
+                      className=" mt-[18px] rounded border border-primary !bg-[#FFFFFF] !text-white"
                       icon={<Icons.GoogleIcon />}
                     >
                       Continue with Google

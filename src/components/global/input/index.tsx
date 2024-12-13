@@ -365,6 +365,6 @@ const styles = StyleSheet.create({
   },
   outlineStyle: {
     borderRadius: 10,
-    border: 1,
+    // border: 1,
   },
 });

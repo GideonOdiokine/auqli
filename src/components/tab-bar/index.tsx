@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { View } from 'react-native';

@@ -38,7 +38,7 @@ export const UserInactivityProvider = ({ children }: any) => {
 
   useEffect(() => {
     if (status === 'signIn') {
-      router.push('/(app)/modals/lock');
+      // router.push('/(app)/modals/lock');
     }
   }, [router, status]);
 
@@ -63,7 +63,7 @@ export const UserInactivityProvider = ({ children }: any) => {
       const elapsed = Date.now() - (storage.getNumber('startTime') || 0);
 
       if (elapsed > 120000 && status === 'signIn') {
-        router.push('/(app)/modals/lock');
+        // router.push('/(app)/modals/lock');
       }
     }
     appState.current = nextAppState;

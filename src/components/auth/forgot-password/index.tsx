@@ -3,18 +3,14 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useDispatch } from 'react-redux';
 
 import Button from '@/components/global/button';
 import CheckBox from '@/components/global/check-box';
 import Input from '@/components/global/input';
 import { toast } from '@/core/toast';
-import { useLoginMutation } from '@/services/auth';
-import { FocusAwareStatusBar } from '@/ui';
+import { FocusAwareStatusBar, View } from '@/ui';
 
 const Login = () => {
-  const dispatch = useDispatch();
-
   const methods = useForm({
     mode: 'onChange',
     defaultValues: {
@@ -24,12 +20,7 @@ const Login = () => {
 
   const {
     formState: { isValid },
-    watch,
   } = methods;
-
-  const data = watch();
-
-  const [login, { isLoading }] = useLoginMutation();
 
   const onSubmit = async () => {
     try {
@@ -80,7 +71,7 @@ const Login = () => {
                       />
                     </View>
                     <Button
-                      isLoading={isLoading}
+                      // isLoading={isLoading}
                       disabled={!isValid}
                       onPress={onSubmit}
                       ButtonTextStyle="!text-white"

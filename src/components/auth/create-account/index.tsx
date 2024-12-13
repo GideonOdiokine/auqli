@@ -3,7 +3,7 @@
 import 'react-phone-number-input/style.css';
 
 import { format } from 'date-fns';
-import { Link, useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 import React from 'react';
 import { Controller, FormProvider, useForm } from 'react-hook-form';
 import { Text, View } from 'react-native';
@@ -61,7 +61,7 @@ const service = [
   },
 ];
 const CreateAccount = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const methods = useForm({
     mode: 'onChange',
@@ -108,13 +108,6 @@ const CreateAccount = () => {
         referrerCode,
       }).unwrap();
       toast.success(result.message);
-      router.push({
-        pathname: '/(auth)/confirm-email',
-        params: {
-          email,
-          password,
-        },
-      });
     } catch (error: any) {
       toast.error(error.data.message);
     }
