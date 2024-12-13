@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
-const PhoneNumberInput = ({ onChange, value }) => {
+const PhoneNumberInput = ({ onChange, value }: any) => {
   const [countryCode] = useState('+234'); // Default country code (e.g., US)
   // const [, setPhoneNumber] = useState(''); // Actual number typed by the user
   const [isFocused, setIsFocused] = useState(false); // Track focus state
