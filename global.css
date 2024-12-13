@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====  REACT PHONE NUMBER INPUT OVERRIDES */
+.input-phone {
+  @apply mt-2 h-11 rounded-md px-3 text-white text-sm border bg-white placeholder:text-dark-600 border-dark-500;
+}
+.input-phone {
+  background-color: red;
+  color: #fff;
+}
+/* =====  REACT PHONE NUMBER INPUT OVERRIDES */
+.PhoneInputInput {
+  outline: none;
+  margin-left: 4px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid red;
+}
+
+.PhoneInputInput::placeholder {
+  color: #1a1d21;
+}
